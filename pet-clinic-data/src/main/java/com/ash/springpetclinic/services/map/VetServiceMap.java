@@ -29,6 +29,6 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudS
 
     @Override
     public void deleteById(Long id) {
-        super.deleteByid(id);
+        super.deleteById(id);
     }
 }

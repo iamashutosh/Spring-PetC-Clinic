@@ -7,7 +7,7 @@ import java.util.Set;
 
 public abstract class AbstractMapService<T , ID> {
 
-    protected Map<ID, T> map = new HashMap<ID, T>();
+    protected Map<ID, T> map = new HashMap<>();
 
     Set<T> findAll(){
         return new HashSet<>(map.values());
@@ -22,7 +22,7 @@ public abstract class AbstractMapService<T , ID> {
         return object;
     }
 
-    void deleteByid(ID id){
+    void deleteById(ID id){
         map.remove(id);
     }
     void delete(T object){
