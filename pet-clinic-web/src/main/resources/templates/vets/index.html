@@ -6,5 +6,22 @@
 </head>
 <body>
     <h1 th:text="'List of Vets'">List of Vets...</h1>
+    <table>
+        <thead>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        </thead>
+        <tbody>
+        <!--/*@thymesVar id="vet" type="com.ash.springpetclinic.model.Vet"*/-->
+        <!--/*@thymesVar id="vets" type="java.util.Set<com.ash.springpetclinic.model.Vet>"*/-->
+        <tr th:each="vet:${vets}">
+            <td th:text="${vet.id}">1</td>
+            <td th:text="${vet.firstname}">1</td>
+            <td th:text="${vet.lastname}"></td>
+        </tr>
+        </tbody>
+
+    </table>
 </body>
 </html>
